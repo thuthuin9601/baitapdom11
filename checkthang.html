@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="month" placeholder="Xin hãy nhập tháng" min="1" max="12">
+    <button onclick="check()">Kiểm tra</button>
+    <div id="result"></div>
+</body>
+</html>
+<script>
+    function check(){
+        let thang=document.getElementById('month').value;
+        if (Number(thang)===1||Number(thang)==3||Number(thang)==5||Number(thang)==7||Number(thang)==8||Number(thang)==10||Number(thang)==12) {
+        let result='số ngày trong tháng '+thang+' là: 31';
+        document.getElementById('result').innerHTML=(result);
+    }
+    else if(Number(thang)==2){
+        let result='số ngày trong tháng '+thang+' là: 28';
+        document.getElementById('result').innerHTML=(result);
+    }
+    else{
+        let result='số ngày trong tháng '+thang+' là: 30';
+        document.getElementById('result').innerHTML=(result);
+    }
+    }
+    
+</script>
